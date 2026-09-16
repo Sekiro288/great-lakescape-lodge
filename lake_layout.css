@@ -1,0 +1,88 @@
+﻿@charset "UTF-8";
+
+/* Task 3b: Import custom web font */
+@font-face {
+    font-family: LodgeFont;
+    src: url("lodge.woff") format("woff"),
+         url("lodge.ttf") format("truetype");
+}
+
+/* Task 3c: Set background and text color (color name + hex value) */
+body {
+    background-color: aliceblue;
+    color: #2c3e50;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    font-family: LodgeFont, serif;
+}
+
+/* Task 3d: Semi‑transparent color using rgba */
+.welcome-block {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+/* Task 3e: ID selector */
+#main-page {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Task 3e: Child element selector */
+aside > h3 {
+    color: darkblue;
+}
+
+/* Task 3e: Nested descendant selector */
+article p {
+    line-height: 1.7;
+}
+
+/* Task 3f: Modify list style and marker */
+ul.nav-list {
+    list-style-type: circle;
+    padding-left: 10px;
+}
+
+/* Task 3g: Pseudo‑class hover */
+nav a:hover {
+    color: white;
+    background-color: #3465a4;
+}
+
+/* Task 3g: Pseudo‑element before; Task 3i: Generate page content */
+blockquote::before {
+    content: "“";
+    font-size: 2.5em;
+    color: #666;
+}
+
+/* Task 3h: Set margin and padding */
+.event-item {
+    margin: 18px 0;
+    padding: 12px 16px;
+}
+
+/* Task 3i: Generate extra content with pseudo‑element */
+footer::after {
+    content: " Great Lakescape Lodge © 2026";
+    display:block;
+    text-align:center;
+    margin-top:10px;
+}
+
+/* Task 3j: Flexbox layout for navigation */
+nav ul {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    padding:0;
+}
+
+/* Task 3j: Grid two‑column layout for main content + sidebar */
+.container-wrap {
+    display: grid;
+    grid-template-columns: 72% 28%;
+    gap: 30px;
+}
